@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+
+    <link rel="stylesheet" href="Css/LandingPageStyle.css">
+
+    <!-- font awesome icons cdn -->
+    <script src="https://kit.fontawesome.com/8434cc5fbe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-info">
+            <div class="nav-info-item">
+                <p><i class="fa-solid fa-phone"></i>&nbsp; +001234567890</p>
+            </div>
+
+            <div class="nav-info-item">
+                <p>Get 50% off Selected Items &nbsp;&nbsp;|&nbsp;&nbsp; Shop Now</p>
+                <p></p>
+            </div>
+
+            <div class="nav-info-item">
+                <p>Eng &nbsp;<i class="arrow down"></i> &nbsp;&nbsp;&nbsp;&nbsp; Location &nbsp;<i class="arrow down"></i></p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="btn"><span class="fas fa-bars"></span></li>
+               <li class="logo"><i class="fa-solid fa-cart-shopping"></i> Shopcart</li>
+               <div class="items">
+                  <li><a href="#">Categories &nbsp;<i class="arrow down"></i></a></li>
+                  <li><a href="#">Deals</a></li>
+                  <li><a href="#">What's New</a></li>
+                  <li><a href="#">Delivery</a></li>
+               </div>
+    
+               <li class="search-icon">
+                  <input type="search" placeholder="Search Product">
+                  <label class="icon">
+                  <span class="fas fa-search"></span>
+                  </label>
+               </li>
+    
+               <div class="personal items">
+                    <li><a href="#"><i class="fa-regular fa-user"></i> Account</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-plus"></i> Cart</a></li>
+               </div>
+            </ul>
+         </nav>
+    </header>
+
+    <div class="discount-img">
+        <img src="" alt="50%off">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $('nav ul li.btn span').click(function(){
+          $('nav ul div.items').toggleClass("show");
+          $('nav ul li.btn span').toggleClass("show");
+        });
+     </script>
+</body>
+</html>
