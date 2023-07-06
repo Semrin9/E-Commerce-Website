@@ -12,6 +12,7 @@
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 2px;
+    cursor: pointer;
 }
 
 .down {
@@ -22,11 +23,11 @@
 .nav-info {
     display: flex;
     justify-content: space-around;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-family: 700;
     color: #fff;
     background-color: #023c29;
-    padding: 0.3rem;
+    padding: 0.55rem;
 }
 
 
@@ -34,7 +35,7 @@
 
 nav {
     background: #fff;
-    padding: 10px 40px 10px 70px;
+    padding: 10px 40px 10px 0;
 }
 
 nav ul {
@@ -43,13 +44,6 @@ nav ul {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-nav ul li.logo {
-    flex: 1;
-    color: #36584c;
-    font-size: 1.3rem;
-    font-weight: 700;
 }
 
 nav ul div.items,
@@ -62,7 +56,7 @@ nav ul div.items a {
     text-decoration: none;
     color: #000;
     font-size: 1.1rem;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
 }
 
 nav ul div.personal a {
@@ -113,7 +107,6 @@ nav ul .search-icon .icon span {
 nav ul li.btn {
     font-size: 1.9rem;
     flex: 1;
-    padding: 0 2.5rem;
     display: none;
 }
 
@@ -137,31 +130,33 @@ nav ul li.btn span.show:before {
 .discount-img {
     display: block;
     text-align: center;
-    padding: 1rem;
-    margin-bottom: 2.7rem;
+    padding: 1rem 3rem;
+    margin: 0 1rem 2.5rem 1.5rem;
 }
 
 .discount-img img{
     width: 95%;
+    border-radius: 15px;
 }
 
 form {
-    margin: 0 0 3rem 2rem;
+    margin: 0 1rem 3rem 4rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: left;
-    padding-right: 3rem;
+    padding: 0 5rem 0 3.3rem ;
 }
 
 form select {
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 0.4rem 0.6rem;
+    padding: 0 0.5rem;
     margin-right: 0.9rem;
     background-color: #e2e3e2;
     border-radius: 20px;
     border: none;
+    border: 7px solid #e2e3e2;
 }
 
 .search-right {
@@ -170,43 +165,66 @@ form select {
 
 #Sort-by {
     background-color: #fff;
-    border: 1px solid #000;
-}
-
-.suggest-section {
-    margin-left: 2rem;
-}
-
-.suggest-section h1{
-    margin-bottom: 1.5rem;
+    border: 2px solid #000;
+    padding: 0.4rem 0.6rem;
 }
 
 
+/* ************ */
 
+.suggest-section h1 {
+    margin-left: 6.8rem;
+}
 
 .cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 20px;
-}
-
-.cards img{
-    width: 55%;
-    height: 54%;
-    border-radius: 2%;  
+    padding: 0 7rem;
+    margin-bottom: 3rem;
 }
 
 .cards article {
     flex: 0 0 25%;
-    line-height: 2;
-    border-radius: 2%;
+    line-height: 2.2;
+    padding: 0.5rem 3rem 0.5rem 0;
 }
 
-.cards button {
-    border-radius: 20px;
-    padding: 0.4rem 1.3rem;
+.cards .fa-heart {
+    position: relative;
+    bottom: -5.5vh;
+    left: 86%;
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
     cursor: pointer;
+}
+
+.cards img {
+    width: 100%;
+    border-radius: 3%;
+    background-color: #f5f6f6;
+    padding: 1rem;
+    transition: transform .4s;
+    box-shadow: #e2e3e2 0px 0px 10px 0px;
+}
+
+.cards .image {
+    transition: transform .4s;
+}
+
+.cards article .name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards article .name-price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 0.5ex; 
 }
 
 .cards .fa-star{
@@ -214,10 +232,102 @@ form select {
     color: #2d9e2f;
 }
 
-.cards .add-cart :hover{
+.cards button {
+    margin-top: 0.7rem;
+    border-radius: 20px;
+    padding: 0.5rem 1.3rem;
+    cursor: pointer;
+}
+
+.cards .fa-heart:hover {
+    background-color: rgba(255, 0, 0, 0.105);
+}
+
+.cards .fa-heart:hover + img{
+    background-color: #fff;
+    box-shadow: none;
+    transform: perspective(500px) rotateX(1deg) scale(1.10) translateY(-10px) translateZ(40px);
+}
+
+.cards img:hover {
+    transform: perspective(500px) rotateX(10deg) scale(1.10) translateY(-10px) translateZ(20px);
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.cards .image:hover > .fa-heart {
+    left: 86%;
+    z-index: 9;
+}
+
+.cards .add-cart :hover {
     background: #023c29;
     color: #e2e3e2;
 }
+
+
+/* ********** */
+
+.categories h1 {
+    margin: 4rem 0 2.3rem 18.5rem;
+}
+
+.categories-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.categories-cards article {
+    padding-right: 1.5rem;
+}
+
+.categories-cards article img {
+    border-radius: 10px;
+    max-width: 100%;
+
+}
+
+.categories-cards article h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+
+.categories-cards article .categories-title {
+    position: relative;
+    bottom: 23.5vh;
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 1;
+}
+
+.categories-cards article img {
+    transition: all .5s;
+}
+
+.categories-cards article:hover img,
+.categories-cards article:focus .img {
+    /* transform: scale(1.1) rotate(5deg) translateX(10px) translateY(-10px) translateZ(10px);
+    box-shadow: #000 0px 0px 10px 0px; */
+
+  transform: perspective(500px) rotateX(12deg) scale(1.05) translateY(-10px) translateZ(10px);
+  box-shadow: #000 0px 3px 10px 0px; 
+}
+
+
+/* ********** */
+
+.best-deals h1 {
+    margin: 0 0 2.3rem 18.5rem;
+}
+
+
+
+
 
 
 
