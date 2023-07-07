@@ -7,6 +7,18 @@
     font-family: 'poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: .4rem;
+    height: .3rem;
+    background-color: #aaaaaa;
+    text-align: center;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #231f1e;
+    border-radius: 10px;
+}
+
 .arrow {
     border: solid #fff;
     border-width: 0 2px 2px 0;
@@ -206,12 +218,12 @@ form select {
     border-radius: 3%;
     background-color: #f5f6f6;
     padding: 1rem;
-    transition: transform .4s;
+    transition: all .6s ease-in-out;
     box-shadow: #e2e3e2 0px 0px 10px 0px;
 }
 
 .cards .image {
-    transition: transform .4s;
+    transition: all .6s ease-in-out;
 }
 
 .cards article .name-price {
@@ -237,9 +249,10 @@ form select {
     border-radius: 20px;
     padding: 0.5rem 1.3rem;
     cursor: pointer;
+    transition: all 500ms ease;
 }
 
-.cards .fa-heart:hover {
+.fa-heart:hover {
     background-color: rgba(255, 0, 0, 0.105);
 }
 
@@ -306,7 +319,7 @@ form select {
 }
 
 .categories-cards article img {
-    transition: all .5s;
+    transition: all .4s ease-in;
 }
 
 .categories-cards article:hover img,
@@ -321,17 +334,244 @@ form select {
 
 /* ********** */
 
-.best-deals h1 {
+.deals-section {
+    margin-bottom: 2rem;
+}
+
+.deals-section h1 {
     margin: 0 0 2.3rem 18.5rem;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.today-deals {
+    width: 69%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    touch-action: pan-y;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.today-deals .card {
+    margin: 0 1.8rem 2.7rem 0;
+    line-height: 2.2;
+    flex: 0 0 31.4%;
+    scroll-snap-align: center;
+}
+
+.today-deals .card .image {
+    position: relative;
+    background-color: #f5f6f6;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0 3rem;
+}
+
+.today-deals .card .image img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    transition: all 200ms ease;
+}
+
+.today-deals .card .image .fa-heart {
+    position: absolute;
+    bottom: 22.5vh;
+    right: 1rem;
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.today-deals .card .name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.today-deals .card .name-price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 0.5ex; 
+}
+
+.today-deals.card .fa-star{
+    font-size: 0.85rem;
+    color: #2d9e2f;
+}
+
+.today-deals .description {
+    font-size: 0.8rem;
+}
+
+.today-deals .card button {
+    margin-top: 0.7rem;
+    border-radius: 20px;
+    padding: 0.5rem 1.3rem;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.today-deals:active {
+    cursor: grabbing;
+}
+
+.today-deals .card .image img:hover {
+    transform: scale(1.2) rotate(2deg) translateY(-10px) translateZ(10px);
+}
+
+.today-deals .card .fa-heart:hover {
+    background-color: rgba(255, 0, 0, 0.105);
+}
+
+.today-deals .card .add-cart :hover {
+    background: #023c29;
+    color: #e2e3e2;
+}
 
 
+/* *********** */
+
+.brand-section {
+    margin: 5rem 0 2.3rem 18.5rem;
+}
+
+.brand-section h1 {
+    margin-bottom: 2.3rem;
+}
+
+.choose-by-brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    width: 84%;
+}
+
+.choose-by-brand .card {
+    display: flex;
+    flex: 0 0 23%;
+    background-color: #f5f6f6;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.25rem 0;
+    margin: 0 1.3rem 1.3rem 0;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    line-height: 2;
+}
+
+.choose-by-brand .card .image{
+    padding-left: 1.25rem;
+    margin-right: 1rem;
+    transition: all 200ms ease;
+}
+
+.choose-by-brand .card .image img{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.choose-by-brand .card h3{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.choose-by-brand .card p{
+    font-size: 13px;
+}
+
+.choose-by-brand .card:hover{
+    border: 1px solid #000;
+}
+
+.choose-by-brand .card .image:hover{
+    transform: scale(1.15);
+}
 
 
+/* *********** */
 
+.discount-section {
+    margin: 5rem 0 2.3rem 18.5rem;
+}
 
+.discount-section h1 {
+    margin-bottom: 2.3rem;
+}
 
+.get-discount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.get-discount .card{
+    flex: 0 0 0 auto;
+    background-color: #f2e4d9;
+    align-items: center;
+    margin: 0 1.3rem 1.3rem 0;
+    border-radius: 10px;
+    justify-content: center;
+    width: 18.71%;
+}
+
+.get-discount .card .content {
+    width: 100%;
+    padding: 1.9rem;
+}
+
+.get-discount .card .content h1 {
+    color: #cb9917;
+    font-size: 3rem;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.get-discount .card .content h1 span {
+    position: relative;
+    top: -16px;
+    font-size: 1.95rem;
+    line-height: 41px;
+}
+
+.get-discount .card .content h3 {
+    margin-bottom: 0.62rem;
+    font-size: 22px;
+}
+
+.get-discount .card .content .description{
+    margin-bottom: 0px;
+    color: #231f1e;
+    font-size: 1rem;
+    line-height: 160%;
+    font-weight: 500;
+}
+
+.get-discount .card .image img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* CHange colors */
+/* Add Annimation */
+/* Add footer */
 
 
 /* *********** */
