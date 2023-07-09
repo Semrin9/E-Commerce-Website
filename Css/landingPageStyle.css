@@ -253,12 +253,27 @@ form select {
     color: #2d9e2f;
 }
 
+.cards .add-view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .cards button {
     margin-top: 0.7rem;
     border-radius: 20px;
-    padding: 0.5rem 1.3rem;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
     transition: all 500ms ease;
+}
+
+.view-btn {
+    background: #023c29;
+}
+
+.view-btn a {
+    text-decoration: none;
+    color: #e2e3e2;
 }
 
 .fa-heart:hover {
@@ -282,9 +297,27 @@ form select {
     z-index: 9;
 }
 
-.cards .add-cart :hover {
+.cards .add-view .add-btn:hover {
     background: #023c29;
     color: #e2e3e2;
+}
+
+.cards .add-view .add-btn:hover + .view-btn{
+    background: #dfe2e2;
+    color: #000;
+}
+
+.cards .add-view .add-btn:hover + .view-btn a{
+    color: #000;
+}
+
+.cards .add-view .view-btn:hover {
+    background: #dfe2e2;
+    color: #000;
+}
+
+.cards .add-view .view-btn:hover > a{
+    color: #000;
 }
 
 
@@ -442,7 +475,7 @@ form select {
     background-color: rgba(255, 0, 0, 0.105);
 }
 
-.today-deals .card .add-cart :hover {
+.today-deals .card .add-view :hover {
     background: #023c29;
     color: #e2e3e2;
 }
@@ -777,6 +810,166 @@ form select {
 .footer-section .bottom-footer .copyright-menu a:hover {
     color: #ff5c4c;
 }
+
+
+
+/* View item page css */
+
+
+.view-item-section {
+    border-top: 2px solid #231f1e33;
+    margin: 1rem 6.8rem;
+
+}
+
+.navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.navigate a {
+    align-items: center;
+    text-decoration: none;
+    color: #0e0f18;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.item-container .preview {
+
+}
+
+.item-container .preview .preview-big-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48rem;
+    width: 90%;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+}
+
+.item-container .preview .preview-big-img img {
+    width: 80%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.item-container .preview .preview-small-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 90%;
+}
+
+.item-container .preview .preview-small-img .preview-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    width: 10.5rem;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+.item-container .preview .preview-small-img .preview-img img {
+    width: 80%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.item-container .details .details-part {
+    margin-bottom: 2rem;
+    max-width: 82%;
+}
+
+.item-container .details .details-part h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0e0f18;
+    margin-bottom: 1rem;
+}
+
+.item-container .details .details-part p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #0e0f18;
+    margin-bottom: 0.7rem;
+    max-width: 70%;
+}
+
+.item-container .details .details-part .fa-star {
+    font-size: 0.85rem;
+    color: #2d9e2f;
+}
+
+.item-container .details .details-part h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0e0f18;
+    border-top: 2px solid #312d2c33;
+    padding-top: 1.9rem;
+}
+
+.item-container .details .details-part h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #0e0f18;
+    margin-bottom: 2rem;
+    border-top: 2px solid #312d2c33;
+    padding-top: 1.9rem;
+}
+
+.item-container .details .details-part .color-imgs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.item-container .details .details-part .color-imgs img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.item-container .details .details-part .color-imgs .active {
+    padding: 3px;
+    border: 2px solid #003d29;
+}
+
+.item-container .details .details-part .counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-top: 2px solid #312d2c33;
+    padding-top: 1.9rem;
+}
+
+.item-container .details .details-part .counter input {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid #231f1e33;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #0e0f18;
+    margin-right: 1rem;
+}
+
+
 
 
 /* Media Queries */
