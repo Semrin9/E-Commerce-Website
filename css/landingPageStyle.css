@@ -7,6 +7,10 @@
     font-family: 'poppins', sans-serif;
 }
 
+body {
+    color: #333;
+}
+
 ::-webkit-scrollbar {
     width: .4rem;
     height: .3rem;
@@ -23,8 +27,9 @@
     border: solid #fff;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 2px;
+    padding: 2.5px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .down {
@@ -36,15 +41,77 @@ body {
     color: #333;
 }
 
-.nav-info {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.8rem;
-    font-family: 700;
-    color: #fff;
-    background-color: #023c29;
-    padding: 0.55rem;
+
+/* Top Navbar Section */
+
+.top-navbar {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #003d29;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
     transition: all 400ms ease;
+    overflow: visible;
+}
+
+.top-navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-navbar-content .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-navbar-content .contact-content img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.top-navbar-content .contact-content .contact-number {
+    margin-left: 5px;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.375rem;
+    text-align: center;
+}
+
+.top-navbar-content .top-navbar-left-menu {
+    display: flex;
+    margin-right: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-navbar-content .top-navbar-left-menu p {
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 140%;
+}
+
+.top-navbar-content .top-navbar-menu {
+    display: flex;
+    cursor: pointer;
+}
+
+.top-navbar-content .top-navbar-menu p {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    margin: 0 10px 0 auto;
+    color: #fff;
+    padding: 0 10px 0 20px;
+    font-size: 12px;
 }
 
 
@@ -858,6 +925,11 @@ form select {
     width: 80%;
     vertical-align: middle;
     display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.item-container .preview img:hover {
+    transform: scale(0.95);
 }
 
 .item-container .preview .preview-small-img {
@@ -882,6 +954,7 @@ form select {
     width: 80%;
     vertical-align: middle;
     display: inline-block;
+    transition: all 0.5s ease;
 }
 
 .item-container .details .details-part {
@@ -938,6 +1011,11 @@ form select {
     border-radius: 50%;
     cursor: pointer;
     margin-right: 1rem;
+    transition: all 0.5s ease;
+}
+
+.item-container .details .details-part .color-imgs img:hover {
+    transform: scale(0.9);
 }
 
 .item-container .details .details-part .color-imgs .active {
