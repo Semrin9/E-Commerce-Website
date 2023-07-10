@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Item</title>
 
-    <link rel="stylesheet" href="../Css/landingPageStyle.css">
+    <link rel="stylesheet" href="../css/landingPageStyle.css">
 
     <!-- font awesome icons cdn -->
     <script src="https://kit.fontawesome.com/8434cc5fbe.js" crossorigin="anonymous"></script>
@@ -104,7 +104,11 @@
 
                 <div class="details-part">
                     <div class="counter">
-                        <input type="number" value="1" min="1" max="10">
+                        <div class="number-counter">
+                            <div id="dec-button" class="spinner-button">-</div>
+                            <input type="number" value="1" min="1" max="15">
+                            <div id="inc-button" class="spinner-button">+</div>
+                        </div>
                         <p>Only <span>12 Items</span> Left! <br>Don't miss it</p>
                     </div>
 
@@ -116,19 +120,25 @@
 
                 <div class="delivery">
                     <div class="free-delivery">
-                        <h4>Free Delivery</h4>
-                        <a href="#">Enter your Postal code for Delivery Availability</a>
+                        <i class="fa-solid fa-truck"></i> 
+                        <div>
+                            <h4>Free Delivery</h4>
+                            <a href="#">Enter your Postal code for Delivery Availability</a>
+                        </div>
                     </div>
                     
                     <div class="return-delivery">
-                        <h4>Return Delivery</h4>
-                        <p>Free 30days Delivery Returns. <a href="#">Details.</a></p>
+                        <i class="fa-regular fa-clipboard"></i>
+                        <div>
+                            <h4>Return Delivery</h4>
+                            <p>Free 30days Delivery Returns. <a href="#">Details.</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="../JavaScript/navbarScript.js"></script>
+    <script src="../javaScript/navbarScript.js"></script>
 </body>
 </html>
