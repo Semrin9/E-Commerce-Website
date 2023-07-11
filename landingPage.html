@@ -34,29 +34,118 @@
             </div>
         </div>
 
-        <nav>
-            <ul>
-                <li class="btn"><span class="fas fa-bars"></span></li>
-               <li class="logo"><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" alt=""></li>
-               <div class="items">
-                  <li><a href="#categories">Categories &nbsp;<i class="arrow down"></i></a></li>
-                  <li><a href="#deals-section">Deals</a></li>
-                  <li><a href="#">What's New</a></li>
-                  <li><a href="#">Delivery</a></li>
-               </div>
-    
-               <li class="search-icon">
-                  <input type="search" placeholder="Search Product">
-                  <label class="icon">
-                  <span class="fas fa-search"></span>
-                  </label>
-               </li>
-    
-               <div class="personal items">
-                    <li><a href="#"><i class="fa-regular fa-user"></i> Account</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-plus"></i> Cart</a></li>
-               </div>
-            </ul>
+        <nav class="logo-left">
+            <div class="logo-left-container">
+                <div class="overflow-container">
+                    <div class="navbar-wrapper">
+                        <a href="#" class="logo">
+                            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" alt="logo-image">
+                        </a>
+                        <nav class="nav-wrapper">
+                            <ul class="nav-menu">
+                                <li>
+                                    <div class="categories-dropdown-wrapper">
+                                        <div class="categories-dropdown-toggle" id="dropdown-toggle">
+                                            <div class="text">Category</div>
+                                            <div class="dropdown-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                                    <g class="icon-wrapper" fill="currentColor">
+                                                        <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z" fill="currentColor"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <nav class="navmenu-dropdown" id="dropdown-toggle-2" style="display: none;">
+                                            <a href="#" class="menu-title">Popular Categories</a>
+                                            <ul role="list" class="navmenu-dropdown-list">
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052dc39b839500c1f8a_Rectangle%201436.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Furniture</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec605386e48004f02ee6a8_Rectangle%201436-4.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Hand Bag</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052f0ed215b864af96e_Rectangle%201436-1.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Shoe</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6053e5b15cfafd550cbb_Rectangle%201436-3.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Headphone</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052f3741a4f87af0f6d_Rectangle%201436-2.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Laptop</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec622235f3f730c0de8c3f_Rectangle%201436-5.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Book</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="nav-link">Deals</a>
+                                </li>
+
+                                <li class="ipad">
+                                    <a href="#" class="nav-link">What's New</a>
+                                </li>
+
+                                <li class="ipad">
+                                    <a href="#" class="nav-link">Delivery</a>
+                                </li>
+                            </ul>
+
+                            <div class="search">
+
+                            </div>
+                        </nav>
+                            <!-- <li class="btn"><span class="fas fa-bars"></span></li> -->
+        
+
+                    </div>
+                </div>
+            </div>
          </nav>
     </header>
 
