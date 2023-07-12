@@ -575,25 +575,9 @@ svg:not(:root) {
     text-decoration: none;
 }
 
+/* Custom Search Section */
 
-
-
-/* Image & Form Section */
-
-.discount-img {
-    display: block;
-    text-align: center;
-    padding: 1rem 3rem;
-    margin: 0 1rem 2.5rem 1.5rem;
-    transition: all 400ms ease;
-}
-
-.discount-img img{
-    width: 95%;
-    border-radius: 15px;
-}
-
-form {
+.custom-search {
     margin: 0 1rem 3rem 4rem;
     display: flex;
     flex-wrap: wrap;
@@ -603,7 +587,16 @@ form {
     transition: all 400ms ease-out;
 }
 
-form select {
+.custom-search .container{ 
+    overflow: hidden;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: flex;
+}
+
+.custom-search select {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0 0.5rem;
@@ -627,19 +620,24 @@ form select {
 
 /* Suggested Section */
 
-.suggest-section h1 {
-    margin-left: 6.8rem;
+.suggest-section .container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: block;
 }
 
 .cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0 7rem;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
-.cards article {
+.cards .cards-item {
     flex: 0 0 25%;
     line-height: 2.2;
     padding: 0.5rem 3rem 0.5rem 0;
@@ -669,25 +667,25 @@ form select {
     transition: all .6s ease-in-out;
 }
 
-.cards article .name-price {
+.cards .cards-item .name-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cards article .name-price span {
+.cards .cards-item .name-price span {
     font-size: 0.9rem;
     font-weight: 500;
     position: relative;
     bottom: 0.5ex; 
 }
 
-.cards .fa-star{
+.cards .fa-star {
     font-size: 0.85rem;
     color: #2d9e2f;
 }
 
-.cards .add-view{
+.cards .add-view {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -714,7 +712,7 @@ form select {
     background-color: rgba(255, 0, 0, 0.105);
 }
 
-.cards .fa-heart:hover + img{
+.cards .fa-heart:hover + img {
     background-color: #fff;
     box-shadow: none;
     transform: perspective(500px) rotateX(1deg) scale(1.10) translateY(-10px) translateZ(40px);
@@ -736,12 +734,12 @@ form select {
     color: #e2e3e2;
 }
 
-.cards .add-view .add-btn:hover + .view-btn{
+.cards .add-view .add-btn:hover + .view-btn {
     background: #dfe2e2;
     color: #000;
 }
 
-.cards .add-view .add-btn:hover + .view-btn a{
+.cards .add-view .add-btn:hover + .view-btn a{ 
     color: #000;
 }
 
@@ -757,49 +755,68 @@ form select {
 
 /* Top Categories Section */
 
+.categories {
+    padding: 5rem 0;
+}
+
+.categories .container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: block;
+}
+
 .categories h1 {
-    margin: 4rem 0 2.3rem 18.5rem;
+    margin: 0 0 2.5rem 0;
+    color: #231f1e;
+    text-transform: capitalize;
 }
 
 .categories-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 23px;
+    column-gap: 23px;
+    grid-row-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
-.categories-cards article {
-    padding-right: 1.5rem;
+.categories-cards .categories-cards-item {
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
-.categories-cards article img {
+.categories-cards .categories-cards-item img {
     border-radius: 10px;
     max-width: 100%;
-
+    vertical-align: middle;
+    display: inline-block;
 }
 
-.categories-cards article h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-}
-
-.categories-cards article .categories-title {
-    position: relative;
-    bottom: 23.5vh;
+.categories-cards .categories-cards-item .categories-title {
+    position: absolute;
+    left: 0%;
+    top: 10%;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
     width: 100%;
     color: #fff;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 1.5rem;
     text-align: center;
-    z-index: 1;
 }
 
-.categories-cards article img {
+.categories-cards .categories-cards-item img {
     transition: all .3s ease-in;
 }
 
-.categories-cards article:hover img,
-.categories-cards article:focus .img {
+.categories-cards-item:hover img,
+.categories-cards-item:focus .img {
     /* transform: scale(1.1) rotate(5deg) translateX(10px) translateY(-10px) translateZ(10px);
     box-shadow: #000 0px 0px 10px 0px; */
 
@@ -811,34 +828,55 @@ form select {
 /* Best Deals Section */
 
 .deals-section {
-    margin-bottom: 2rem;
-}
-
-.deals-section h1 {
-    margin: 0 0 2.3rem 18.5rem;
+    margin-bottom: 5rem;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
     overflow: hidden;
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: block;
+}
+
+.deals-section h1 {
+    margin: 0 0 2.5rem 0;
+    color: #231f1e;
+    text-transform: capitalize;
+}
+
+.today-outer-deals {
+    overflow: hidden;
+    touch-action: pan-y;
 }
 
 .today-deals {
-    width: 69%;
+    position: relative;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
-    touch-action: pan-y;
+    transition-property: transform;
+    box-sizing: content-box;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    z-index: 1;
+    margin-bottom: 2.5rem;
 }
 
 .today-deals .card {
     margin: 0 1.8rem 2.7rem 0;
     line-height: 2.2;
-    flex: 0 0 31.4%;
     scroll-snap-align: center;
+    backface-visibility: hidden;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    flex: 0 0 auto;
+    border-radius: 10px;
 }
 
 .today-deals .card .image {
@@ -847,13 +885,32 @@ form select {
     border-radius: 10px;
     width: 100%;
     padding: 0 3rem;
+    overflow: hidden;
+    text-align: center;
 }
 
 .today-deals .card .image img {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+    overflow-clip-margin: content-box;
+    overflow: clip;
     transition: all 200ms ease;
+}
+
+.wishlist {
+    position: absolute;
+    left: auto;
+    top: 1rem;
+    right: 1rem;
+    bottom: auto;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background-color: #fff;
 }
 
 .today-deals .card .image .fa-heart {
@@ -880,7 +937,7 @@ form select {
     bottom: 0.5ex; 
 }
 
-.today-deals.card .fa-star{
+.today-deals .card .fa-star{
     font-size: 0.85rem;
     color: #2d9e2f;
 }
@@ -901,11 +958,11 @@ form select {
     cursor: grabbing;
 }
 
-.today-deals .card .image img:hover {
-    transform: scale(1.2) rotate(2deg) translateY(-10px) translateZ(10px);
+.today-deals .card .image .item-image:hover {
+    transform: scale(1.2);
 }
 
-.today-deals .card .fa-heart:hover {
+.today-deals .card .wishlist:hover {
     background-color: rgba(255, 0, 0, 0.105);
 }
 
@@ -1565,7 +1622,17 @@ input[type=number]::-webkit-inner-spin-button {
         line-height: 30px;
     }
 
+    .suggest-section .container {
+        padding: 0 20px;
+    }
 
+    .categories-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .categories-cards .categories-cards-item img {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1616,6 +1683,27 @@ input[type=number]::-webkit-inner-spin-button {
     .button-color {
         font-size: 1rem;
     }
+
+    .suggest-section {
+        padding: 0 2.5px;
+    }
+
+    .suggest-section .container {
+        padding: 0 1rem;
+    }
+
+    .categories h1 { 
+        margin-bottom: 1.9rem;
+        font-size: 26px;
+    }
+
+    .categories-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .categories-cards .categories-cards-item .categories-title {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1655,5 +1743,22 @@ input[type=number]::-webkit-inner-spin-button {
 
     .button-color {
         font-size: 14px;
+    }
+
+    .categories h1 { 
+        margin-bottom: 1.9rem;
+        font-size: 24px;
+    }
+
+    .categories-cards {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .categories-cards .categories-cards-item .categories-title {
+        top: 3%;
+        font-size: 0.9rem;
+        text-align: center;
     }
 }
