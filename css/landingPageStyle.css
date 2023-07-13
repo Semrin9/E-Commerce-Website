@@ -1192,14 +1192,6 @@ svg:not(:root) {
 
 /* Footer */
 
-.footer-section {
-    overflow: hidden;
-    width: 100%;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 2.5;
-}
-
 .footer-section .top-footer {
     display: grid;
     -webkit-box-align: start;
@@ -1727,6 +1719,41 @@ input[type=number]::-webkit-inner-spin-button {
     .cards {
         grid-template-columns: 1fr 1fr;
     }
+
+    .top-footer {
+        grid-column-gap: 0px;
+        grid-template-areas: ".";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .responsive-nav {
+        grid-column-start: span 2;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+    }
+
+    .department {
+        grid-column-start: span 1;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+    }
+
+    .footer-section .bottom-footer {
+        display: block;
+    }
+
+    .footer-section .bottom-footer .copyright-left {
+        margin-bottom: 10px;
+    }
+
+    .footer-section .bottom-footer .copyright-menu {
+        margin-bottom: 10px;
+    }
+
+    .footer-section .bottom-footer .copyright-text {
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1881,6 +1908,18 @@ input[type=number]::-webkit-inner-spin-button {
         margin-bottom: 0.7rem;
     }
     
+    .footer-section .top-footer p {
+        margin-bottom: 30px;
+    }
+
+    .footer-section .bottom-footer .copyright-left .button {
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .footer-section .bottom-footer .copyright-text {
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -1963,5 +2002,64 @@ input[type=number]::-webkit-inner-spin-button {
     .cards {
         grid-column-gap: 1rem;
         grid-template-columns: 1fr;
+    }
+
+    .top-footer {
+        grid-row-gap: 0px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .responsive-nav {
+        grid-column-start: span 4;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+    }
+    
+    .footer-logo {
+        width: 60%;
+    }
+
+    .payment {
+        display: none;
+    }
+
+    .payment-methods {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .department {
+        grid-column-start: span 2;
+        grid-column-end: span 2;
+    }
+
+    .about-us {
+        grid-column-start: span 2;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+    }
+
+    .services {
+        grid-column-start: span 2;
+        grid-row-start: span 3;
+        grid-row-end: span 3;
+    }
+
+    .help {
+        grid-column-start: span 2;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+    }
+
+    .footer-section .bottom-footer {
+        display: block;
+    }
+
+    .footer-section .bottom-footer .copyright-left {
+        flex-wrap: wrap;
+    }
+
+    .footer-section .bottom-footer .copyright-text {
+        margin-bottom: 15px;
     }
 }
