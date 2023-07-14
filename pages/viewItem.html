@@ -14,124 +14,246 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li class="btn"><span class="fas fa-bars"></span></li>
-            <li class="logo"><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" alt=""></li>
-            <div class="items">
-                <li><a href="../landingPage.html#categories">Categories &nbsp;<i class="arrow down"></i></a></li>
-                <li><a href="../landingPage.html#deals-section">Deals</a></li>
-                <li><a href="#">What's New</a></li>
-                <li><a href="#">Delivery</a></li>
-            </div>
+        <nav class="logo-left">
+            <div class="logo-left-container">
+                <div class="overflow-container">
+                    <div class="navbar-wrapper">
+                        <a href="#" class="logo">
+                            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" alt="logo-image">
+                        </a>
+                        <nav class="nav-wrapper">
+                            <ul class="nav-menu">
+                                <li>
+                                    <div class="categories-dropdown-wrapper">
+                                        <div class="categories-dropdown-toggle" id="dropdown-toggle">
+                                            <div class="text">Category</div>
+                                            <div class="dropdown-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                                    <g class="icon-wrapper" fill="currentColor">
+                                                        <path d="M10.293,3.293,6,7.586,1.707,3.293A1,1,0,0,0,.293,4.707l5,5a1,1,0,0,0,1.414,0l5-5a1,1,0,1,0-1.414-1.414Z" fill="currentColor"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
 
-            <li class="search-icon">
-                <input type="search" placeholder="Search Product">
-                <label class="icon">
-                <span class="fas fa-search"></span>
-                </label>
-            </li>
+                                        <nav class="navmenu-dropdown" id="dropdown-toggle-2" style="display: none;">
+                                            <a href="#" class="menu-title">Popular Categories</a>
+                                            <ul role="list" class="navmenu-dropdown-list">
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052dc39b839500c1f8a_Rectangle%201436.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Furniture</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec605386e48004f02ee6a8_Rectangle%201436-4.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Hand Bag</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
 
-            <div class="personal items">
-                <li><a href="#"><i class="fa-regular fa-user"></i> Account</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-plus"></i> Cart</a></li>
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052f0ed215b864af96e_Rectangle%201436-1.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Shoe</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6053e5b15cfafd550cbb_Rectangle%201436-3.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Headphone</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec6052f3741a4f87af0f6d_Rectangle%201436-2.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Laptop</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+                                                <li class="navmenu-dropdown-list-item">
+                                                    <a href="#" class="navmenu-dropdown-list-link">
+                                                        <img loading="lazy" src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63ec622235f3f730c0de8c3f_Rectangle%201436-5.png" alt="">
+                                                        <div>
+                                                            <div class="navmenu-dropdown-list-link-heading">Book</div>
+                                                            <div class="navmenu-dropdown-list-link-description">240 &nbsp;Item &nbsp;Available</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="nav-link">Deals</a>
+                                </li>
+
+                                <li class="ipad">
+                                    <a href="#" class="nav-link">What's New</a>
+                                </li>
+
+                                <li class="ipad">
+                                    <a href="#" class="nav-link">Delivery</a>
+                                </li>
+                            </ul>
+
+                            <div class="search">
+                                <div class="zero-width">
+                                    <div class="card-star"></div>
+                                </div>
+                                <form action="#" class="search-form">
+                                    <input type="search" class="search-input" maxlength="150" placeholder="Search Product">
+                                    <div class="search-btn">
+                                        <div class="btn-container">
+                                            <div class="svg"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path opacity="0.8" d="M8.33317 3.33317C5.57175 3.33317 3.33317 5.57175 3.33317 8.33317C3.33317 11.0946 5.57175 13.3332 8.33317 13.3332C11.0946 13.3332 13.3332 11.0946 13.3332 8.33317C13.3332 5.57175 11.0946 3.33317 8.33317 3.33317ZM1.6665 8.33317C1.6665 4.65127 4.65127 1.6665 8.33317 1.6665C12.0151 1.6665 14.9998 4.65127 14.9998 8.33317C14.9998 9.87376 14.4773 11.2923 13.5997 12.4212L18.0891 16.9106C18.4145 17.236 18.4145 17.7637 18.0891 18.0891C17.7637 18.4145 17.236 18.4145 16.9106 18.0891L12.4212 13.5997C11.2923 14.4773 9.87376 14.9998 8.33317 14.9998C4.65127 14.9998 1.6665 12.0151 1.6665 8.33317Z" fill="#231F1E"></path>
+                                                </svg>
+                                            </div>
+                                            <!-- <input type="submit" class="w-button"> -->
+                                        </div>
+                                    </div>
+                                    <!-- <div class="search-results"></div> -->
+                                </form>
+                            </div>
+                        </nav>
+                        <div class="nav-right-content">
+                            <a href="#" class="nav-right-link">
+                                <div class="nav-icon">
+                                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9d6ee83660ebe1de_user.png" loading="lazy" alt="">
+                                </div>
+                                <div>Account</div>
+                            </a>
+
+                            <a href="#" class="nav-right-link right">
+                                <div class="nav-icon">
+                                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9b865e78d4ff6b8d_shopping-cart-add.png" loading="lazy" alt="">
+                                </div>
+                                <div>Cart</div>
+                            </a>
+                        </div>
+                    
+                        <div class="menu-button">
+                            <div class="icon-nav-menu"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </ul>
-        </nav>
+         </nav>
     </header>
 
 
     <section class="view-item-section">
-        <div class="navigate">
-            <p><a href="">Electronics /</a> <a href=""> Audio /</a> <a href=""> Headphones /</a> <a href=""> Shop Headphones by type /</a> <a href=""> airpods-max </a></p>
-        </div>
-
-        <div class="item-container">
-            <div class="preview">
-                <div class="preview-big-img">
-                    <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-pink-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022365000" alt="Headphones">
-                </div>
-
-                <div class="preview-small-img">
-                    <div class="preview-img">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-green-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022364000" alt="Headphones">
-                    </div>
-
-                    <div class="preview-img">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-spacegray-202011?wid=470&hei=556&fmt=png-alpha&.v=1604709508000" alt="Headphones">
-                    </div>
-
-                    <div class="preview-img">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-skyblue-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022365000" alt="Headphones">
-                    </div>
-
-                    <div class="preview-img">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-silver-202011?wid=470&hei=556&fmt=png-alpha&.v=1604021221000" alt="Headphones">
-                    </div>
-                </div>
+        <div class="container">
+            <div class="navigate">
+                <p><a href="">Electronics &nbsp;</a> <a href=""> / &nbsp; Audio &nbsp;</a> <a href=""> / &nbsp; Headphones &nbsp;</a> <a href=""> / &nbsp; Shop Headphones by type &nbsp;</a> <a href="" style="font-weight: 600;"> / &nbsp; airpods-max </a></p>
             </div>
 
-            <div class="details">
-                <div class="details-part">
-                    <h1>AirPods- Max</h1>
-                    <p>A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.</p>
-
-                    <div class="rate">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span>(121)</span>
+            <div class="item-container">
+                <div class="preview">
+                    <div class="preview-big-img">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-pink-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022365000" alt="Headphones">
                     </div>
-                </div>
 
-                <div class="details-part">
-                    <h2>$549.00 or 99.99/month</h2>
-                    <p>Suggested payments with 6 months special financing</p>
-                </div>
-
-                <div class="details-part">
-                    <h3>Chose a Color</h3>
-                    <div class="color-imgs">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-pink-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846875000" alt="" class="active">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-spacegray-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1604622935000" alt="">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-green-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846875000" alt="">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-silver-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846876000" alt="">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-skyblue-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846876000" alt="">
-                    </div>
-                </div>
-
-                <div class="details-part">
-                    <div class="counter">
-                        <div class="number-counter">
-                            <div id="dec-button" class="spinner-button">-</div>
-                            <input type="number" value="1" min="1" max="15">
-                            <div id="inc-button" class="spinner-button">+</div>
+                    <div class="preview-small-img">
+                        <div class="preview-img">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-green-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022364000" alt="Headphones">
                         </div>
-                        <p>Only <span>12 Items</span> Left! <br>Don't miss it</p>
-                    </div>
 
-                    <div class="buy-add">
-                        <button class="buy">Buy Now</button>
-                        <button class="add">Add to Cart</button>
-                    </div>
-                </div>
+                        <div class="preview-img">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-spacegray-202011?wid=470&hei=556&fmt=png-alpha&.v=1604709508000" alt="Headphones">
+                        </div>
 
-                <div class="delivery">
-                    <div class="free-delivery">
-                        <i class="fa-solid fa-truck"></i> 
-                        <div>
-                            <h4>Free Delivery</h4>
-                            <a href="#">Enter your Postal code for Delivery Availability</a>
+                        <div class="preview-img">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-skyblue-202011?wid=470&hei=556&fmt=png-alpha&.v=1604022365000" alt="Headphones">
+                        </div>
+
+                        <div class="preview-img">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-silver-202011?wid=470&hei=556&fmt=png-alpha&.v=1604021221000" alt="Headphones">
                         </div>
                     </div>
-                    
-                    <div class="return-delivery">
-                        <i class="fa-regular fa-clipboard"></i>
-                        <div>
-                            <h4>Return Delivery</h4>
-                            <p>Free 30days Delivery Returns. <a href="#">Details.</a></p>
+                </div>
+
+                <div class="details">
+                    <div class="details-part">
+                        <h1>AirPods- Max</h1>
+                        <p>A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.</p>
+
+                        <div class="rate">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span>(121)</span>
+                        </div>
+                    </div>
+
+                    <div class="details-part">
+                        <h2>$549.00 or 99.99/month</h2>
+                        <p>Suggested payments with 6 months special financing</p>
+                    </div>
+
+                    <div class="details-part">
+                        <h3>Chose a Color</h3>
+                        <div class="color-imgs">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-pink-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846875000" alt="" class="active">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-spacegray-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1604622935000" alt="">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-green-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846875000" alt="">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-silver-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846876000" alt="">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/finish-skyblue-202011?wid=204&amp;hei=204&amp;fmt=png-alpha&amp;.v=1603846876000" alt="">
+                        </div>
+                    </div>
+
+                    <div class="details-part">
+                        <div class="counter">
+                            <div class="number-counter">
+                                <div id="dec-button" class="spinner-button">-</div>
+                                <input type="number" value="1" min="1" max="15">
+                                <div id="inc-button" class="spinner-button">+</div>
+                            </div>
+                            <p>Only <span>12 Items</span> Left! <br>Don't miss it</p>
+                        </div>
+
+                        <div class="buy-add">
+                            <button class="buy">Buy Now</button>
+                            <button class="add">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="delivery">
+                        <div class="free-delivery">
+                            <i class="fa-solid fa-truck"></i> 
+                            <div>
+                                <h4>Free Delivery</h4>
+                                <a href="#">Enter your Postal code for Delivery Availability</a>
+                            </div>
+                        </div>
+                        
+                        <div class="return-delivery">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <div>
+                                <h4>Return Delivery</h4>
+                                <p>Free 30days Delivery Returns. <a href="#">Details.</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
