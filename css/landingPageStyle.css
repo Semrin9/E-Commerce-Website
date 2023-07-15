@@ -483,6 +483,22 @@ svg:not(:root) {
     line-height: 1;
 }
 
+.ipad {
+    opacity: 1;
+}
+
+.ipad :hover {
+    opacity: 0.7;
+}
+
+.nav-right-link div:hover {
+    color: #e37623;
+}
+
+.nav-right-link .nav-icon:hover + div {
+    color: #e37623;
+}
+
 .icon-nav-menu::before{
     content: "\e602";
 }
